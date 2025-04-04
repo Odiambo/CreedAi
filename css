@@ -1,0 +1,36 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+  }
+  
+  main {
+    flex: 1; /* This pushes footer down */
+  }
+  
+  footer {
+    padding: 15px 20px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #e0e0e0;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  footer a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
