@@ -10,7 +10,30 @@
       background-color: #0d0f12;
       color: #fff;
       font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
+
+    .container {
+      flex: 1;
+    }
+
+    .nav {
+        width: 100%;
+        background-color: transparent;
+        padding: 10px 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+      }
+  
+      .nav-link {
+        color: #dbd5d5 !important;
+      }
 
     .pricing-card {
       border-radius: 20px;
@@ -46,9 +69,44 @@
     .btn-choose:hover {
       background-color: #00c07a;
     }
+
+    footer {
+        padding: 20px 10px;
+        background-color: #1a1d23;
+        color: #dbd5d5;
+        border-top: 1px solid #333;
+        font-family: Arial, sans-serif;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+  
+    footer a {
+        color: #00e38d;
+        text-decoration: none;
+    }
+  
+    footer a:hover {
+        text-decoration: underline;
+    }
   </style>
 </head>
-<body>
+
+<body class="p-3 m-0 border-0">
+    <!-- Navigation Menu -->
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/about.html">Vivid Computing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/tools.html">Tools</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/index.html">Home</a>
+      </li>
+    </ul>
 
   <div class="container py-5">
     <h1 class="text-center mb-5" style="font-size: 3rem;"><strong>Select Your Plan</strong></h1>
@@ -76,6 +134,20 @@
       </div>
     </div>
   </div>
+
+  <footer>
+      <div class="company-info">
+        <strong>QuantumCreed</strong><br>
+        <address>
+          TomorrowAnalytics (c) 2025<br>
+          <a href="#">Terms of Service</a>
+        </address>
+      </div>
+      <div class="contact-info">
+        <strong>Contact Us</strong><br>
+        <a href="mailto:info@qcreed.com">info@qcreed.com</a>
+      </div>
+  </footer>
 
 </body>
 </html>
