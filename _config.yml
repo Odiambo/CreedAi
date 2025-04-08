@@ -1,0 +1,23 @@
+
+title: "NerdTV.world"
+description: "Website built with Jekyll and Docker. NerTV is a central resource for creator using AI tools for mature content "
+author: Datapoint
+email: datapoint@mustawa.com
+
+# No baseurl since it's intended to run at the root
+baseurl: "" # Change if deploying under a subdirectory
+url: "http://localhost:5500" # Update to GitHub Pages URL if deploying
+
+# Jekyll Settings
+markdown: kramdown
+theme: minima # Optional; can remove if you're not using it
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - .github
+
+# Enable future-dated content just in case
+future: true
