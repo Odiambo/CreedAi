@@ -57,6 +57,50 @@
           }
         </style>
       </head>
+
+      <script>
+        const passwordInput = document.getElementById("password");
+        const confirmInput = document.getElementById("confirmPassword");
+        const passwordHelp = document.getElementById("passwordHelp");
+        const confirmHelp = document.getElementById("confirmHelp");
+        const form = document.querySelector("form");
+      
+        function validatePasswordStrength(password) {
+          const minLength = 8;
+          const hasUpper = /[A-Z]/.test(password);
+          const hasLower = /[a-z]/.test(password);
+          const hasDigit = /[0-9]/.test(password);
+          const isValidLength = password.length >= minLength;
+      
+          if (!isValidLength) return "Password must be at least 8 characters.";
+          if (!hasUpper) return "Password must include at least one uppercase letter.";
+          if (!hasLower) return "Password must include at least one lowercase letter.";
+          if (!hasDigit) return "Password must include at least one number.";
+      
+          return "";
+        }
+      
+        form.addEventListener("submit", function (e) {
+          const password = passwordInput.value;
+          const confirm = confirmInput.value;
+      
+          passwordHelp.textContent = "";
+          confirmHelp.textContent = "";
+      
+          const strengthError = validatePasswordStrength(password);
+          if (strengthError) {
+            passwordHelp.textContent = strengthError;
+            e.preventDefault();
+            return;
+          }
+      
+          if (password !== confirm) {
+            confirmHelp.textContent = "Passwords do not match.";
+            e.preventDefault();
+          }
+        });
+      </script>
+      
       
       <body class="p-3 m-0 border-0 bd-creed">
         <!-- Navigation Menu -->
@@ -94,21 +138,26 @@
               <input type="email" class="form-control" id="email" name="email" required>
             </div>
       
-            <div class="mb-3">
-              <label for="password" class="form-label">Password</label>
-              <input type="password" class="form-control" id="password" name="password" minlength="8" required>
-            </div>
+        <!-- Password Field with Validation Help -->
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" name="password" minlength="8" required>
+          <div id="passwordHelp" class="form-text text-danger"></div>
+        </div>
+
+        <!-- Confirm Password Field with Validation Help -->
+        <div class="mb-3">
+          <label for="confirmPassword" class="form-label">Confirm Password</label>
+          <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" minlength="8" required>
+          <div id="confirmHelp" class="form-text text-danger"></div>
+        </div>
+
+            
+        <!-- CAPTCHA -->
+        <div class="g-recaptcha" data-sitekey="your-site-key-here"></div>
       
-            <div class="mb-3">
-              <label for="confirmPassword" class="form-label">Confirm Password</label>
-              <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" minlength="8" required>
-            </div>
-      
-            <!-- CAPTCHA -->
-            <div class="g-recaptcha" data-sitekey="your-site-key-here"></div>
-      
-            <div class="d-grid mt-4">
-              <button type="submit" class="btn btn-primary btn-block">Get Started</button>
+        <div class="d-grid mt-4">
+            <button type="submit" class="btn btn-primary btn-block">Get Started</button>
             </div>
           </form>
         </div>
