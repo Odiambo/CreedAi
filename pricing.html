@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuantumCreed Pricing</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0d0f12;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .pricing-card {
+      border-radius: 20px;
+      background-color: #1a1d23;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0, 227, 141, 0.2);
+      margin-bottom: 20px;
+    }
+
+    .pricing-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .price {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #00e38d;
+    }
+
+    .discount {
+      font-size: 0.9rem;
+      color: #aaaaaa;
+    }
+
+    .btn-choose {
+      background-color: #00e38d;
+      color: #000;
+      font-weight: bold;
+      border-radius: 12px;
+    }
+
+    .btn-choose:hover {
+      background-color: #00c07a;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container py-5">
+    <h1 class="text-center mb-5" style="font-size: 3rem;"><strong>Select Your Plan</strong></h1>
+
+    <div class="row justify-content-center">
+      <!-- Monthly Plan -->
+      <div class="col-md-4">
+        <div class="pricing-card text-center">
+          <div class="pricing-title">Monthly Plan</div>
+          <div class="price my-3">$25</div>
+          <div class="text-muted">per month</div>
+          <button class="btn btn-choose mt-4 w-100">Choose Monthly</button>
+        </div>
+      </div>
+
+      <!-- Yearly Plan -->
+      <div class="col-md-4">
+        <div class="pricing-card text-center">
+          <div class="pricing-title">Annual Plan</div>
+          <div class="price my-3">$150</div>
+          <div class="text-muted">per year</div>
+          <div class="discount mt-2">Save 17% compared to monthly</div>
+          <button class="btn btn-choose mt-4 w-100">Choose Annual</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
