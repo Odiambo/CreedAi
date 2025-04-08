@@ -6,7 +6,7 @@ email: datapoint@mustawa.com
 
 # No baseurl since it's intended to run at the root
 baseurl: "" # Change if deploying under a subdirectory
-url: "http://localhost:5500" # Update to GitHub Pages URL if deploying
+url: "" # Update to GitHub Pages URL if deploying
 
 # Jekyll Settings
 markdown: kramdown
